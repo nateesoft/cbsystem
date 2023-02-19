@@ -1,0 +1,17 @@
+lib
+*.log
+/dist
+/build/
+/database
+/itfinger_conf.txt
+/nbproject
+/issue-feature
+/test
+*.zip
+process*
+*.xlsx
+*.xml
+*.zip
+/lib_dll
+/lib
+/tools
