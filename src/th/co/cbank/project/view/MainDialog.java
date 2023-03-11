@@ -278,7 +278,7 @@ public class MainDialog extends BaseSwing {
         jMenuItem37 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("ระบบบริหารธนาคารชุมชน V 1.1-2023.02.20");
+        setTitle("ระบบบริหารธนาคารชุมชน V 1.1-2023.03.10");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -296,7 +296,7 @@ public class MainDialog extends BaseSwing {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
+            .addGap(0, 744, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -530,29 +530,26 @@ public class MainDialog extends BaseSwing {
         leftProfilePanel.setLayout(leftProfilePanelLayout);
         leftProfilePanelLayout.setHorizontalGroup(
             leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbPic, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(leftProfilePanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(summaryProfilePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(leftProfilePanelLayout.createSequentialGroup()
-                        .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbMemberCode)
-                            .addComponent(lbMemberName)
-                            .addComponent(lbAccountLabel)
-                            .addComponent(lbIndexNo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtAccCode, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtProfileCode, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                            .addComponent(txtProfileName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                            .addComponent(txtIndexNo))))
-                .addContainerGap(34, Short.MAX_VALUE))
+            .addComponent(lbPic, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(summaryProfilePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(leftProfilePanelLayout.createSequentialGroup()
+                    .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lbMemberCode)
+                        .addComponent(lbMemberName)
+                        .addComponent(lbAccountLabel)
+                        .addComponent(lbIndexNo))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtAccCode, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtProfileCode, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtProfileName, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtIndexNo, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         leftProfilePanelLayout.setVerticalGroup(
             leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(leftProfilePanelLayout.createSequentialGroup()
-                .addComponent(lbPic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbPic, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(leftProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lbIndexNo)
@@ -571,7 +568,7 @@ public class MainDialog extends BaseSwing {
                     .addComponent(txtProfileName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(summaryProfilePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         topMenuAction.setLayout(new java.awt.GridLayout(1, 0));
@@ -615,15 +612,15 @@ public class MainDialog extends BaseSwing {
         jPanel2.setBackground(new java.awt.Color(255, 51, 0));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("บริษัทสยามคอนวีเนียน จำกัด เลขที่ 9/39 หมู่3 ซอยวัดศรีประวัติ ถ.จงกลถนอม ต.ศาลากลาง อ.บางกรวย จ.นนทบุรี 11130");
+        jLabel2.setText("บริษัทสยามคอนวีเนียน จำกัด เลขที่ 9/39 หมู่3 ซอยวัดศรีประวัติ ถ.จงกลถนอม");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("โทร. 0-2497-8608, 096-989-4159 แฟกซ์. 0-2497-8608");
+        jLabel3.setText("ต.ศาลากลาง อ.บางกรวย จ.นนทบุรี 11130 โทร. 0-2497-8608, 096-989-4159 แฟกซ์. 0-2497-8608");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -681,7 +678,7 @@ public class MainDialog extends BaseSwing {
 
         txtMemQty.setEditable(false);
         txtMemQty.setBackground(new java.awt.Color(255, 255, 204));
-        txtMemQty.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        txtMemQty.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtMemQty.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMemQty.setText("0");
         txtMemQty.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -690,7 +687,7 @@ public class MainDialog extends BaseSwing {
         jPanel43.setLayout(new java.awt.GridLayout(1, 0));
 
         btnTimeShow.setBackground(new java.awt.Color(255, 255, 255));
-        btnTimeShow.setFont(new java.awt.Font("Tahoma", 1, 28)); // NOI18N
+        btnTimeShow.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnTimeShow.setForeground(new java.awt.Color(0, 0, 255));
         btnTimeShow.setText("00:00:00");
         jPanel43.add(btnTimeShow);
@@ -707,19 +704,19 @@ public class MainDialog extends BaseSwing {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel37Layout.createSequentialGroup()
-                        .addComponent(txtShowEmpCode, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtShowEmpCode, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel85)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtShowEmpName, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtShowEmpName))
                     .addComponent(txtBranchName, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel87)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtMemQty, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(txtMemQty, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel37Layout.setVerticalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -739,7 +736,7 @@ public class MainDialog extends BaseSwing {
                             .addComponent(txtBranchName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(txtMemQty, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10))
+                .addContainerGap())
         );
 
         mnProgram.setText("โปรแกรม");
@@ -1262,8 +1259,7 @@ public class MainDialog extends BaseSwing {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mainTabbedPane)
-                    .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1798,6 +1794,7 @@ public class MainDialog extends BaseSwing {
     }
 
     private void clearFormAll() {
+        txtAccCode.setEditable(true);
         menuHide();
         clearProfileForm();
         showTime();

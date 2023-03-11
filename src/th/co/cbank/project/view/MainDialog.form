@@ -719,7 +719,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="0"/>
-    <Property name="title" type="java.lang.String" value="&#xe23;&#xe30;&#xe1a;&#xe1a;&#xe1a;&#xe23;&#xe34;&#xe2b;&#xe32;&#xe23;&#xe18;&#xe19;&#xe32;&#xe04;&#xe32;&#xe23;&#xe0a;&#xe38;&#xe21;&#xe0a;&#xe19; V 1.1-2023.02.20"/>
+    <Property name="title" type="java.lang.String" value="&#xe23;&#xe30;&#xe1a;&#xe1a;&#xe1a;&#xe23;&#xe34;&#xe2b;&#xe32;&#xe23;&#xe18;&#xe19;&#xe32;&#xe04;&#xe32;&#xe23;&#xe0a;&#xe38;&#xe21;&#xe0a;&#xe19; V 1.1-2023.03.10"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
@@ -755,11 +755,10 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="0"/>
                   <Component id="mainTabbedPane" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanel37" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel37" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -813,7 +812,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="890" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="744" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -840,35 +839,31 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="lbPic" alignment="0" pref="0" max="32767" attributes="0"/>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="summaryProfilePanel" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lbMemberCode" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbMemberName" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbAccountLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbIndexNo" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="txtAccCode" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtProfileCode" alignment="0" pref="224" max="32767" attributes="0"/>
-                              <Component id="txtProfileName" alignment="0" pref="224" max="32767" attributes="0"/>
-                              <Component id="txtIndexNo" max="32767" attributes="0"/>
-                          </Group>
+              <Component id="lbPic" min="-2" pref="290" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="summaryProfilePanel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lbMemberCode" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbMemberName" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbAccountLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbIndexNo" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="txtAccCode" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtProfileCode" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtProfileName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtIndexNo" min="-2" pref="224" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="lbPic" max="32767" attributes="0"/>
+                  <Component id="lbPic" min="-2" pref="206" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="lbIndexNo" alignment="2" min="-2" max="-2" attributes="0"/>
@@ -891,7 +886,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="summaryProfilePanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="108" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1475,13 +1470,13 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="&#xe1a;&#xe23;&#xe34;&#xe29;&#xe31;&#xe17;&#xe2a;&#xe22;&#xe32;&#xe21;&#xe04;&#xe2d;&#xe19;&#xe27;&#xe35;&#xe40;&#xe19;&#xe35;&#xe22;&#xe19; &#xe08;&#xe33;&#xe01;&#xe31;&#xe14; &#xe40;&#xe25;&#xe02;&#xe17;&#xe35;&#xe48; 9/39 &#xe2b;&#xe21;&#xe39;&#xe48;3 &#xe0b;&#xe2d;&#xe22;&#xe27;&#xe31;&#xe14;&#xe28;&#xe23;&#xe35;&#xe1b;&#xe23;&#xe30;&#xe27;&#xe31;&#xe15;&#xe34; &#xe16;.&#xe08;&#xe07;&#xe01;&#xe25;&#xe16;&#xe19;&#xe2d;&#xe21; &#xe15;.&#xe28;&#xe32;&#xe25;&#xe32;&#xe01;&#xe25;&#xe32;&#xe07; &#xe2d;.&#xe1a;&#xe32;&#xe07;&#xe01;&#xe23;&#xe27;&#xe22; &#xe08;.&#xe19;&#xe19;&#xe17;&#xe1a;&#xe38;&#xe23;&#xe35; 11130"/>
+            <Property name="text" type="java.lang.String" value="&#xe1a;&#xe23;&#xe34;&#xe29;&#xe31;&#xe17;&#xe2a;&#xe22;&#xe32;&#xe21;&#xe04;&#xe2d;&#xe19;&#xe27;&#xe35;&#xe40;&#xe19;&#xe35;&#xe22;&#xe19; &#xe08;&#xe33;&#xe01;&#xe31;&#xe14; &#xe40;&#xe25;&#xe02;&#xe17;&#xe35;&#xe48; 9/39 &#xe2b;&#xe21;&#xe39;&#xe48;3 &#xe0b;&#xe2d;&#xe22;&#xe27;&#xe31;&#xe14;&#xe28;&#xe23;&#xe35;&#xe1b;&#xe23;&#xe30;&#xe27;&#xe31;&#xe15;&#xe34; &#xe16;.&#xe08;&#xe07;&#xe01;&#xe25;&#xe16;&#xe19;&#xe2d;&#xe21;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -1493,7 +1488,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="&#xe42;&#xe17;&#xe23;. 0-2497-8608, 096-989-4159 &#xe41;&#xe1f;&#xe01;&#xe0b;&#xe4c;. 0-2497-8608"/>
+            <Property name="text" type="java.lang.String" value="&#xe15;.&#xe28;&#xe32;&#xe25;&#xe32;&#xe01;&#xe25;&#xe32;&#xe07; &#xe2d;.&#xe1a;&#xe32;&#xe07;&#xe01;&#xe23;&#xe27;&#xe22; &#xe08;.&#xe19;&#xe19;&#xe17;&#xe1a;&#xe38;&#xe23;&#xe35; 11130 &#xe42;&#xe17;&#xe23;. 0-2497-8608, 096-989-4159 &#xe41;&#xe1f;&#xe01;&#xe0b;&#xe4c;. 0-2497-8608"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -1519,24 +1514,24 @@
                       <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel86" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="txtShowEmpCode" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="txtShowEmpCode" min="-2" pref="81" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtShowEmpName" min="-2" pref="167" max="-2" attributes="0"/>
+                          <Component id="txtShowEmpName" max="32767" attributes="0"/>
                       </Group>
                       <Component id="txtBranchName" min="-2" pref="334" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="txtMemQty" min="-2" pref="79" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPanel43" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtMemQty" min="-2" pref="71" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel43" min="-2" pref="174" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1562,7 +1557,7 @@
                       <Component id="txtMemQty" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="jPanel43" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1664,7 +1659,7 @@
               <Color blue="cc" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
+              <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="0"/>
@@ -1693,7 +1688,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="28" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="0" red="0" type="rgb"/>

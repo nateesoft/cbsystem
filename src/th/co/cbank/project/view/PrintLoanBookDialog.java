@@ -266,37 +266,34 @@ public class PrintLoanBookDialog extends BaseDialogSwing {
                 return;
             }
             try {
+                SimpleDateFormat simp = new SimpleDateFormat("dd/MM/yy");
                 tbTransaction.setFont(new Font(AppConstants.DEFAULT_FONT, Font.PLAIN, AppConstants.DEFAULT_FONT_SIZE));
                 tbTransaction.setRowHeight(30);
                 DefaultTableModel model = (DefaultTableModel) tbTransaction.getModel();
                 TableUtil.clearModel(model);
-                String sql = "select * from cb_transaction_loan "
-                        + "where t_acccode='" + txtLoanCode.getText() + "' "
-                        + "and LineNo>0 "
-                        + "and t_status in('10','7') "
-                        + "order by t_index";
-                ResultSet rs = MySQLConnect.getResultSet(sql);
-                while (rs.next()) {
-                    Object[] p = new Object[12];
-                    p[0] = rs.getString("t_date");//01/05/58
-                    p[1] = rs.getString("t_booktype");//DM                    
-                    if (rs.getString("t_status").equals("10")) {
-                        p[2] = rs.getString("t_amount");//99,999,999.99
-                        p[3] = "";
-                    } else {
-                        p[2] = "";//99,999,999.99
-                        p[3] = rs.getString("t_amount");//99,999,999.99
+                List<CbTransactionLoanBean> listTran = getCbTransactionLoanControl().listCbTransactionLoanAll(txtLoanCode.getText(), false);
+                for (int i = 0; i < listTran.size(); i++) {
+                    CbTransactionLoanBean transactionLoanBean = (CbTransactionLoanBean) listTran.get(i);
+                    Object[] dataRow = new Object[12];
+                    dataRow[0] = simp.format(transactionLoanBean.getT_date());//01/05/58
+                    dataRow[1] = transactionLoanBean.getT_booktype();//DM
+                    if (transactionLoanBean.getT_status().equals(AppConstants.CB_STATUS_LOAN)) { // กู้เงิน
+                        dataRow[2] = NumberFormat.showDouble2(transactionLoanBean.getT_amount());//99,999,999.99
+                        dataRow[3] = "";
+                    } else {// ชำระเงิน
+                        dataRow[2] = NumberFormat.showDouble2(listTran.get(i-1).getT_balance());// เงินต้นคงเหลือ
+                        dataRow[3] = NumberFormat.showDouble2(transactionLoanBean.getT_amount());//99,999,999.99
                     }
-                    p[4] = rs.getDouble("t_interest");//99,999,999.99
-                    p[5] = rs.getDouble("t_balance");//99,999,999.99
-                    p[6] = rs.getDouble("t_fee");//9,999.99;
-                    p[7] = "";//99;
-                    p[8] = rs.getString("t_empcode");//พนักงานรับชำระ
-                    p[9] = rs.getString("printchk").equals("N");//สถานะการพิมพ์
-                    p[10] = rs.getString("lineNo");//บรรทัดในการพิมพ์
-                    p[11] = rs.getString("t_docno");//เลขที่ชำระรายการ
+                    dataRow[4] = NumberFormat.showDouble2(transactionLoanBean.getT_interest());//99,999,999.99
+                    dataRow[5] = NumberFormat.showDouble2(transactionLoanBean.getT_balance());//99,999,999.99
+                    dataRow[6] = NumberFormat.showDouble2(transactionLoanBean.getT_fee());//9,999.99;
+                    dataRow[7] = "";//99;
+                    dataRow[8] = transactionLoanBean.getT_empcode();//พนักงานรับชำระ
+                    dataRow[9] = transactionLoanBean.getPrintChk().equals("N");//สถานะการพิมพ์
+                    dataRow[10] = transactionLoanBean.getLineNo();//บรรทัดในการพิมพ์
+                    dataRow[11] = transactionLoanBean.getT_docno();//เลขที่ชำระรายการ
 
-                    model.addRow(p);
+                    model.addRow(dataRow);
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e.getMessage());
@@ -356,37 +353,36 @@ public class PrintLoanBookDialog extends BaseDialogSwing {
 
     private void printTransactionLoanAgain(boolean preview) {
         try {
-            List<CbTransactionLoanBean> listTran = getCbTransactionLoanControl().listCbTransactionLoanAll(txtLoanCode.getText());
+            List<CbTransactionLoanBean> listTran = getCbTransactionLoanControl().listCbTransactionLoanAll(txtLoanCode.getText(), true);
 
             if (listTran.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "ไม่พบรายงานความเคลื่อนไหว !");
             } else {
-                ArrayList<ReportOrangeBean> listBean = new ArrayList<>();
-                ReportOrangeBean bean1;
+                List<ReportOrangeBean> listBean = new ArrayList<>();
+                ReportOrangeBean reportOrangeBean;
+                SimpleDateFormat sim = new SimpleDateFormat("dd/MM/yy");
                 for (int i = 0; i < listTran.size(); i++) {
-                    CbTransactionLoanBean tBean = (CbTransactionLoanBean) listTran.get(i);
-                    bean1 = new ReportOrangeBean();
-                    SimpleDateFormat sim = new SimpleDateFormat("dd/MM/yy");
+                    CbTransactionLoanBean transactionLoanBean = (CbTransactionLoanBean) listTran.get(i);
+                    reportOrangeBean = new ReportOrangeBean();
+                    reportOrangeBean.setDate(sim.format(transactionLoanBean.getT_date()));
+                    reportOrangeBean.setType(transactionLoanBean.getT_booktype());
+                    reportOrangeBean.setStart(NumberFormat.showDouble2(transactionLoanBean.getT_amount()));
+                    reportOrangeBean.setPayStart(transactionLoanBean.getT_status());
+                    reportOrangeBean.setPayInt(NumberFormat.showDouble2(transactionLoanBean.getT_interest()));
+                    reportOrangeBean.setFee(transactionLoanBean.getT_fee());
+                    reportOrangeBean.setLine("" + transactionLoanBean.getLineNo());
+                    reportOrangeBean.setCashier(transactionLoanBean.getT_empcode());
+                    reportOrangeBean.setBalance(NumberFormat.showDouble2(transactionLoanBean.getT_balance()));
 
-                    bean1.setDate(sim.format(tBean.getT_date()));
-                    bean1.setType(tBean.getT_booktype());
-                    bean1.setStart(NumberFormat.showDouble2(tBean.getT_amount() - tBean.getT_interest()));
-                    bean1.setPayStart(tBean.getT_status());
-                    bean1.setPayInt(NumberFormat.showDouble2(tBean.getT_interest()));
-                    bean1.setFee(tBean.getT_fee());
-                    bean1.setLine("" + tBean.getLineNo());
-                    bean1.setCashier(tBean.getT_empcode());
-                    bean1.setBalance(NumberFormat.showDouble2(tBean.getT_balance()));
-
-                    listBean.add(bean1);
+                    listBean.add(reportOrangeBean);
 
                     // update line print chk
-                    getCbTransactionSaveControl().updateLoanLinePrint(tBean.getT_acccode(), tBean.getLineNo(), "" + tBean.getT_date());
+                    getCbTransactionSaveControl().updateLoanLinePrint(transactionLoanBean.getT_acccode(), transactionLoanBean.getLineNo(), "" + transactionLoanBean.getT_date());
                 }
 
                 if (!preview) {
-                    PassBook_PSiPR9 v = new PassBook_PSiPR9();
-                    v.printTransactionOrange2(listBean, true);
+                    PassBook_PSiPR9 passBook = new PassBook_PSiPR9();
+                    passBook.printTransactionOrange2(listBean, true);
                 }
             }
 

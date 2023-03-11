@@ -115,13 +115,17 @@ public class CbTransactionLoanControl extends BaseControl {
         }
     }
 
-    public List<CbTransactionLoanBean> listCbTransactionLoanAll(String accCode) {
+    public List<CbTransactionLoanBean> listCbTransactionLoanAll(String accCode, boolean filterPrintCheck) {
         try {
+            String addSql = "";
+            if(filterPrintCheck){
+                addSql = " and PrintChk='N' ";
+            }
             String sql = "select * "
                     + "from cb_transaction_loan "
                     + "where t_acccode='" + accCode + "' "
                     + "and LineNo>0 "
-                    + "and PrintChk='N' "
+                    + addSql
                     + "and t_status in('10','7') "
                     + "order by t_index";
             ResultSet rs = MySQLConnect.getResultSet(sql);

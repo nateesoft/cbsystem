@@ -24,6 +24,10 @@ public class NumberFormat {
     public static String showDouble2(double obj) {
         return dec1.format(obj);
     }
+    
+    public static String showDouble2ToCeil(double obj) {
+        return dec1.format(Math.ceil(obj));
+    }
 
     public static String showDouble2(String str) {
         try {

@@ -337,8 +337,7 @@ public class LoginDialog extends BaseDialogSwing {
 
         logger.info("Start Login: " + txtUser.getText());
         try {
-            String sql = "select * "
-                    + "from cb_user "
+            String sql = "select * from cb_user "
                     + "where username='" + txtUser.getText().trim() + "' "
                     + "and password=md5('" + txtPass.getText().trim() + "') ";
             Log.write.info("Login by MD5");
